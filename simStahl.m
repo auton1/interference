@@ -1,6 +1,6 @@
 function events = simStahl(n_sim, L, shape, p_escape)
-% Simulate data under Stahl model. Following simStahl.c from xoi package 
-% by Karl Broman.
+% Simulate phase-known data under Stahl model. Following simStahl.c from 
+% xoi R package by Karl Broman.
 %
 % Usage: events = simStahl(n_sim, L, nu, p_escape);
 %

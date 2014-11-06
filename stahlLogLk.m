@@ -2,11 +2,14 @@ function lk=stahlLogLk(events, L, nu, p)
 % Calculate log likelihoods according to the Stahl model.
 %
 % Events is a cell array, with one entry per meiosis.
-% Each entry is a (vertical) vector of event positions (in Morgans).
+% Each entry is a (vertical) vector of crossover positions (in Morgans).
 %
 % L is the chromosome length (in Morgans).
 % nu is the interference parameter.
 % p is the escape probability.
+%
+% Note this function is likely to be very difficult to make sense of 
+% as it has been highly optimized.
 %
     disp(['nu = ' num2str(nu) ' p = ' num2str(p)])
     if (nu <= 0)

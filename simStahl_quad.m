@@ -1,6 +1,6 @@
 function events = simStahl_quad(n_sim, L, shape, p_escape)
-% Simulate quartet data under Stahl model. Following simStahl.c from xoi 
-% package by Karl Broman.
+% Simulate phase unknown data from a quartet under the Stahl model. 
+% Following simStahl.c from xoi R package by Karl Broman.
 %
 % Usage: events = simStahl_quad(n_sim, L, nu, p_escape);
 %

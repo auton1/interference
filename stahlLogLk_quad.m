@@ -1,9 +1,9 @@
 function lk=stahlLogLk_quad(events, L, nu, p)
 % Calculate log likelihoods according to the Stahl model,
-% but assuming that events are observed in a quartet.
+% but assuming that events are observed in a quartet (i.e. phase unknown).
 %
 % Events is a cell array, with one entry per (parental) individual.
-% Each entry is a (vertical) vector of event positions (in Morgans).
+% Each entry is a (vertical) vector of crossover positions (in Morgans).
 %
 % max map is the chromosome length (in Morgans).
 % nu is the interference parameter
@@ -11,6 +11,7 @@ function lk=stahlLogLk_quad(events, L, nu, p)
 %
 % Note this function is likely to be very difficult to make sense of 
 % as it has been highly optimized.
+%
 
     disp(['nu = ' num2str(nu) ' p = ' num2str(p)])
     if (nu <= 0)
@@ -90,9 +91,8 @@ function lk=stahlLogLk_quad(events, L, nu, p)
         sum_sites0 = sum(uniq_I0,1);
         N_sites0 = size(uniq_I0, 1);
 
-        uniq_I2 = fliplr(I2(ia0,:)');
-        ia2 = flipud(ia0);
-        ib2 = flipud(ib0);
+        [uniq_I2,ia2,ib2] = unique(I2, 'rows');
+        uniq_I2 = uniq_I2';
         lkc_prime = lkc(:, ia2);
 
         % Loop over partitions with the same number of sites
