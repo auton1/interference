@@ -1,7 +1,7 @@
 interference
 ============
 
-MATLAB code for estimating crossover interference, following Campbell *et al*., 2014.
+MATLAB code for estimating crossover interference under the Housworth-Stahl model, following Campbell *et al*., 2014.
 
 Requirements
 ------------
@@ -41,3 +41,13 @@ Other functions in the folder are used internally by the above scripts. Futher d
 + **stahlLogLk_quad.m** : Calculate the likelihood under the Housworth-Stahl model for phase-unknown data, as described in Campbell *et al*., 2014.
 + **derivest.m, fminsearchbnd.m, gradest.m, hessdiag.m, hessian.m** : All used internally, and derived directly from John D'Errico's contributions to the MATLAB file exchange (http://www.mathworks.com/matlabcentral/fileexchange/8277-fminsearchbnd--fminsearchcon and http://www.mathworks.com/matlabcentral/fileexchange/13490-adaptive-robust-numerical-differentiation).
 
+Performance
+-----------
+
+To test the performance of the estimator, we we have performed simulations of both phase-known and phase-unknown data. Specifically, we have simulated data assuming  interference parameter, nu = 5,7,10, and escape parameter, p = 0,0.05,0.1. For each combination of parameters, we simulated both phase known and phase unknown data representing 25, 50, and 100 meioses, and repeating the process for chromosome map lengths representative of both males and females. 
+
+![alt text](simulations.png "Simulation results")
+
+The above figure shows the performance of the phase-known and phase-unknown estimators on  the simulated data. For each figure, the phase-known estimates are shown in blue and the phase-unknown estimates are shown in red. The number of simulated meioses is indicated by the bubble size. Simulated values are indicated by black dotted lines, with random jitter having been added to the x-coordinate of each data point to aid visualization. 
+
+In general, we see that while both estimators provide largely consistent estimates of the simulated parameters, the phase-unknown implementation requires a larger number of meioses to obtain accurate estimates. 
