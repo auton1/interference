@@ -39,7 +39,7 @@ Other functions in the folder are used internally by the above scripts. Futher d
 + **simStahl_quad.m**  : Simulate phase unknown data (as derived from quartet families) under the Housworth-Stahl model.
 + **stahlLogLk.m** : Calculate the likelihood under the Housworth-Stahl model.
 + **stahlLogLk_quad.m** : Calculate the likelihood under the Housworth-Stahl model for phase-unknown data, as described in Campbell *et al*., 2014.
-+ **derivest.m, fminsearchbnd.m, gradest.m, hessdiag.m, hessian.m** : All used internally, and derived directly from John D'Errico's contributions to the MATLAB file exchange (http://www.mathworks.com/matlabcentral/fileexchange/8277-fminsearchbnd--fminsearchcon and http://www.mathworks.com/matlabcentral/fileexchange/13490-adaptive-robust-numerical-differentiation).
++ **derivest.m, fminsearchbnd.m, gradest.m, hessdiag.m, hessian.m** : All used internally, and derived directly from John D'Errico's contributions to the MATLAB file exchange, which can be found [here](http://www.mathworks.com/matlabcentral/fileexchange/8277-fminsearchbnd--fminsearchcon) and [here](http://www.mathworks.com/matlabcentral/fileexchange/13490-adaptive-robust-numerical-differentiation).
 
 Performance
 -----------
