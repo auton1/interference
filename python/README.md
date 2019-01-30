@@ -35,7 +35,7 @@ The two scripts have similar usage syntax:
 Other functions in the folder are used internally by the above scripts. Futher details can be found with the help comments at the start of each function. Brief descriptions follow:  
 
 + **simStahl.py**  : Simulate data under the Housworth-Stahl model (both phase-known and phase-unknown routines).
-+ **stahlLogLk.m** : Calculate the likelihood under the Housworth-Stahl model for phase-known data, and phase-unknown data, as described in Campbell *et al*., 2014.
++ **stahlLogLk.py** : Calculate the likelihood under the Housworth-Stahl model for phase-known data, and phase-unknown data, as described in Campbell *et al*., 2014.
 
 Performance
 -----------
