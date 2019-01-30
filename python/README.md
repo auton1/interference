@@ -17,20 +17,18 @@ The folder contains example functions to demonstrate simulation of crossover dat
 
 The two scripts have similar usage syntax:
 
-`[nu_est, p_est] = example_Stahl(nu, p, cM_map_len, N_indv)`  
-`[nu_est, p_est] = example_Stahl_quad(nu, p, cM_map_len, N_indv)`
+`[nu_est, p_est] = example_Stahl(nu, p, cM_map_len, n_indv)`  
+`[nu_est, p_est] = example_Stahl_quad(nu, p, cM_map_len, n_indv)`
 
 + Output:
   - nu_est: estimated interference parameter.  
   - p_est: estimated escape parameter.  
-  - lk_max: log likelihood of fitted model.  
-  - covariance_matrix: covariance matrix estimated as inverse of fisher information matrix.  
   
 + Input:
   - nu: interference parameter to use for simulation (Required).  
   - p: escape parameter to use for simulation (Required).  
   - cM_map_len:	vector of chromosome map lengths in centiMorgans (optional. Default [200; 250]).  
-  - N_indv: number of individuals to simulate (optional. Default 300).  
+  - n_indv: number of individuals to simulate (optional. Default 300).  
  
 Other functions in the folder are used internally by the above scripts. Futher details can be found with the help comments at the start of each function. Brief descriptions follow:  
 
